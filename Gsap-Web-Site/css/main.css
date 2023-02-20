@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --color-web: #f4efec;
+    --color-text: #cdc6c3;
+}
+
+@font-face {
+    font-family: releway-c;
+    src: url(../fonts/raleway-regular.woff2);
+}
+
+@font-face {
+    font-family: releway-c;
+    src: url(../fonts/outfit-regular.woff2);
+}
+
+body {
+    background-image: url("../img/bg.jpg");
+    overflow: hidden;
+}
