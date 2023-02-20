@@ -36,7 +36,7 @@ function update() {
 
     const elActives = document.querySelectorAll('.active')
 
-    elProgress.style.width = ((elActives.length - 1) / (elCircles.length -1)) * 95 + '%'
+    elProgress.style.width = ((elActives.length - 1) / (elCircles.length -1)) * 100 + '%'
 
     if(currentActive === 1) {
         elPrev.disabled = true
