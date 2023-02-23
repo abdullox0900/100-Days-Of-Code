@@ -1,123 +1,99 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
 :root {
-    --index: calc(1vw + 1vh);
-    --color-web: #f4efec;
-    --color-text: #cdc6c3;
-    --gallery-gap: calc(var(--index) * 10)
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
+	--gallery-gap: calc(var(--index) * 7.5)
 }
-
 @font-face {
-    font-family: releway-c;
-    src: url(../fonts/raleway-regular.woff2);
+	font-family: raleway-c;
+	src: url(../fonts/raleway-regular.woff2);
 }
-
 @font-face {
-    font-family: outfit-c;
-    src: url(../fonts/outfit-regular.woff2);
+	font-family: outfit-c;
+	src: url(../fonts/outfit-regular.woff2);
 }
-
+h1, h2, h3, h4, h5, h6 {
+	font-family: outfit-c;
+}
+/* will-change */
+.content, .hero, .main-header, .gallery > * {
+	will-change: transform;
+}
 body {
-    font-family: releway-c;
-    color: #fafafa;
-    background-image: url("../img/bg.jpg");
-    background-size: 50px;
-    overflow-x: hidden;
+	background-image: url(../img/bg.jpg);
+	background-size: 50px;
+	color: #fafafa;
+	font-family: raleway-c;
+	overflow-x: hidden;
 }
 
 /* хром, сафари */
-body::-webkit-scrollbar {
-    width: 0;
-}
+body::-webkit-scrollbar { width: 0; }
 
 /* ie 10+ */
-body {
-    -ms-overflow-style: none;
-}
+body { -ms-overflow-style: none; }
 
 /* фф (свойство больше не работает, других способов тоже нет)*/
-body {
-    overflow: -moz-scrollbars-none;
-}
+body { overflow: -moz-scrollbars-none; }
 
-h1,
-h2,
-h3 {
-    font-size: outfit-c;
+.hero {
+	width: calc(var(--index) * 36);
+	position: absolute;
+	left: 37vw;
+	top: 22vh;
+	z-index: -1;
 }
-
+.main-header {
+	height: 100vh;
+}
 .container {
-    padding: 0 7vw;
+	padding: 0 7vw;
 }
-
-.contant, .hero, .hero-main, .gallery > * {
-    will-change: transform;
+.main-title {
+	font-size: calc(var(--index) * 8);
+	position: absolute;
+	width: min-content;
+	bottom: 12vh;
+	line-height: .9;
 }
-
-.hero__img {
-    width: calc(var(--index) * 30);
-    position: absolute;
-    left: 40vw;
-    top: 8vh;
-}
-
-.hero-main {
-    height: 100vh;
-}
-
-.hero-main__title {
-    position: absolute;
-    width: min-content;
-    bottom: 15vh;
-    font-size: calc(var(--index) * 6);
-    font-weight: 700;
-    line-height: normal;
-}
-
 .gallery {
-    display: flex;
-    padding: calc(var(--index) * 8) 0;
+	display: flex;
+	padding: calc(var(--index) * 8) 0;
 }
-
-.gallery>* {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
-
 .gallery__item {
-    max-width: calc(var(--index) * 21);
-    margin-bottom: var(--gallery-gap);
-    max-height: 90vh;
-    border-radius: 8px;
+	max-width: calc(var(--index) * 21);
+	margin-bottom: var(--gallery-gap);
+	max-height: 180vh;
+	border-radius: 8px;
 }
-
-.gallery__left .gallery__item {
-    margin-top: calc(var(--gallery-gap) * 1.75);
+.gallery__left {
+	margin-top: calc(var(--gallery-gap) * 1.75);
 }
-
 .gallery__right .gallery__item {
-    margin: 0;
-    margin-top: var(--gallery-gap);
+	margin: 0;
+	margin-top: var(--gallery-gap);
 }
-
 .text-block {
-    color: var(--color-text);
-    position: relative;
+	color: var(--color-text);
+	position: relative;
 }
-
-.gallery__item-title {
-    font-size: 2rem;
-    line-height: 2.4rem;
-    color: var(--color-web);
-    margin-bottom: 1.5rem;
+.text-block__h {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	color: var(--color-header);
+	margin-bottom: 1.5rem;
 }
-
-.gallery__item-desc {
-    line-height: 1.75;
+.text-block__p {
+	line-height: 1.75;
 }
